@@ -13,37 +13,25 @@ int main(){
 	int val = 1;
 	while (val < 11){
 		nextnode = malloc(sizeof(struct link));
-		printf("\t%d\n", nextnode);
 		nextnode->value = val;
-		printf("\t%d\n", nextnode->value);
-		printf("\t%d\n", start);
 		if (start == NULL) {
 			nextnode->next = NULL;
-			printf("\t%d in if condition..\n", nextnode->next);
 			start = nextnode;
-			printf("\t%d in if condition..\n", start);
 		}
 		else {
 			temp = start;
-			printf("\t%d in else condition..\n", temp);
 			while (temp->next != NULL){
-				printf("\t%din else/while loop..\n", temp->next);
 				temp = temp->next;
-				printf("\t%din else/while loop..\n", temp);
 			}
 			temp->next = nextnode;
-			printf("\t%din else condition..\n", temp->next);
 			nextnode->next = NULL;
-			printf("\t%din else condition..\n", nextnode->next);
 		}
 		val ++;
 	}
 	temp = start;
-	printf("\t%d\n", temp);
 	while (temp != NULL){
 		printf("%d\n",temp->value);
 		temp = temp->next;
-		printf("\t%d\n", temp);
 	}
 	
 	return 0;

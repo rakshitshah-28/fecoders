@@ -11,14 +11,13 @@ struct link * start = NULL;
 
 int main(){
 	struct link *temp, *nextnode;
-	char Name[100], letter[1];
+	char Name[100];
 	int i = 0;
 	printf("Enter your Name - ");
 	scanf("%s", &Name);
 	while (Name[i] != '\0'){
-		letter = Name[i];
 		nextnode = malloc(sizeof(struct link));
-		nextnode->name = letter;
+		nextnode->name = Name[i];
 		if (start == NULL) {
 			nextnode->next = NULL;
 			start = nextnode;

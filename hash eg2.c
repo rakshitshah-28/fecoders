@@ -1,7 +1,7 @@
 // write a progra,m to take array as input,
 // find wheteher a element is present in it with constant time complexity
 // consider no collision
-
+//Hash Code
 #include<stdio.h>
 
 void hast(int *);
